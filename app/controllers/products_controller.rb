@@ -1,4 +1,4 @@
-class MarketsController < InheritedResources::Base
+class ProductsController < InheritedResources::Base
   actions :all, except: [:show]
 
   def create
@@ -12,6 +12,6 @@ class MarketsController < InheritedResources::Base
   private
     def resource_params
       return [] if request.get?
-      [params.require(:market).permit(:name)]
+      [params.require(:product).permit(:name, :description, :price)]
     end
 end

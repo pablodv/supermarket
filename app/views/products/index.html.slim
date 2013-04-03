@@ -1,0 +1,6 @@
+h1 Products
+
+- collection.each do |product|
+  = product.name
+  = product.price
+  = link_to "Edit", [:edit, product]
